@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		
+		<style>
+		@keyframes turn {
+		0% {transform:rotate(0);}
+		25% {transform:rotate(-90deg);}
+		50% {transform:rotate(-180deg);}
+		75% {transform:rotate(-270deg);}
+		100% {transform:rotate(-360deg);}
+		}
+			div {
+			background: url('поворот.png') center no-repeat;
+			height: 50px;
+			width: 50px;
+			margin: 200px auto;
+			}
+			div:hover {
+			animation: turn 4s linear infinite;
+			}
+		</style>
+	</head>
+	
+	
+	<body>
+		<div></div>
+	</body>
+	
+</html>
