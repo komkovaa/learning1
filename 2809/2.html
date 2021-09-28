@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Grid</title>
+        
+        <style>
+			.container {
+			display: grid;
+			height: 800px;
+			width: 800px;
+			margin: 50px auto;
+			background: #eee;
+			grid-template-columns: repeat(8, 100px);
+			grid-template-rows: repeat(8, 100px);
+			}
+			.box {
+			background: black;
+			}
+			.box + div + div {
+			background:blue;
+			}
+			/*.class:nth-of-type(15) {
+			background: blue;
+			}*/
+			div:nth-child(8n+3) {
+				background: green;
+}
+			.box ~ div:nth-child(8n+5) {
+			background: red;
+			}
+			
+			.second {
+			background: white;
+			}
+			.second + .second:last-child {
+			background: yellow;
+			}
+			
+		</style>
+		
+	</head>
+	
+	<body>
+		<div class='container'>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div class='second'> </div>
+		<div> </div>
+		<div> </div>
+		<div class='box'> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div class='second'> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		<div> </div>
+		</div>
+	</body>
+</html>	
