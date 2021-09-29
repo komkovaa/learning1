@@ -36,6 +36,7 @@ p, h1, h4 {
 	border-radius: 10px;
 	width: 280px;
 	padding: 10px;
+	transition-timing-funchion: linear;
 }
 h1, h4 {text-align: center;}
 
@@ -48,29 +49,25 @@ h1, h4 {text-align: center;}
 				height: 816px;
 				padding: 0;
 				position: relative;
-				transition-timing-funchion: linear;
+				
 			}
             p {
-				
+				position: absolute;
 				margin: 0;
 			}
 			.first {
-				position: absolute;
 				top: 50px;
 				left: 50px;
 			}
 			.second {
-				position: absolute;
 				top: 50px;
 				right: 50px;
 			}
 			.third {
-				position: absolute;
 				bottom: 50px;
 				right: 50px;
 			}
 			.fourht {
-				position: absolute;
 				bottom: 50px;
 				left: 50px;
 			}
