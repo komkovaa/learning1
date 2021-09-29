@@ -1,0 +1,103 @@
+﻿﻿@font-face {
+	font-family: 'Lobster-Regular';
+	src: url('Lobster-Regular.woff2') format('woff2');
+}
+
+@keyframes around1 {
+	from {transform: rotate(0deg) translateX(300px) rotate(0deg); }
+	to {transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+@keyframes around2 {
+	from {transform: rotate(0deg) translateX(300px) rotate(0deg); }
+	to {transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+@keyframes around3 {
+	from {transform: rotate(0deg) translateX(300px) rotate(0deg); }
+	to {transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+@keyframes around4 {
+	from {transform: rotate(0deg) translateX(300px) rotate(0deg); }
+	to {transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+body {
+	font: normal 16px/24px 'Lobster-Regular';
+	margin: 0;
+}
+.container {
+	margin: 50px auto;
+	background-image: radial-gradient(lightblue 80%, white);
+	position: relative;
+	padding: 10px;
+	width: 800px;
+	height: 800px;
+}
+p, h1, h4 {
+	background: white;
+	border-radius: 10px;
+	width: 280px;
+	padding: 10px;
+	transition-timing-funchion: linear;
+}
+h1, h4 {text-align: center;}
+
+@media screen and (min-width: 640px) {
+			.container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 816px;
+				padding: 0;
+				position: relative;
+				
+			}
+            p {
+				position: absolute;
+				margin: 0;
+			}
+			.first {
+				top: 50px;
+				left: 50px;
+			}
+			.second {
+				top: 50px;
+				right: 50px;
+			}
+			.third {
+				bottom: 50px;
+				right: 50px;
+			}
+			.fourht {
+				bottom: 50px;
+				left: 50px;
+			}
+@media screen and (min-width: 1200px) {
+	.container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 816px;
+				padding: 0;
+			}
+			 p {
+				position: absolute;
+				margin: 0;
+			}
+			.first {
+				position: absolute;
+			animation: around1 15s linear infinite;				
+			}
+			.second {
+				position: absolute;
+			animation: around2 15s linear infinite;				
+			}
+			.third {
+				position: absolute;
+			animation: around3 15s linear infinite;				
+			}
+			.fourht {
+				position: absolute;
+			animation: around4 15s linear infinite;				
+			}
+		}
