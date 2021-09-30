@@ -24,7 +24,6 @@ body {
 	margin: 0;
 }
 .container {
-	font: normal 16px/24px 'Lobster-Regular';
 	margin: 50px auto;
 	background-image: radial-gradient(lightblue 80%, white);
 	position: relative;
@@ -48,9 +47,7 @@ h1, h4 {text-align: center;}
 				justify-content: center;
 				align-items: center;
 				height: 816px;
-				padding: 0;
-				position: relative;
-				
+				padding: 0;	
 			}
             p {
 				position: absolute;
