@@ -1,37 +1,65 @@
-﻿﻿@font-face {
+﻿ @font-face {
 	font-family: 'Lobster-Regular';
 	src: url('Lobster-Regular.woff2') format('woff2');
 }
 
 @keyframes around1 {
-	from {transform: rotate(0deg) translateX(300px) rotate(0deg); }
-	to {transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+	 0%   { left: 50px; top: 50px;}
+     25%  { left: 870px; top: 50px;}
+     50%  { left: 870px; top: 550px;}
+     75%  { left: 50px; top: 550px;}
+     100% { left: 50px; top: 50px;}
 }
 @keyframes around2 {
-	from {transform: rotate(0deg) translateX(300px) rotate(0deg); }
-	to {transform: rotate(360deg) translateX(300px) rotate(-360deg); }
-}
+	/*from {transform: rotate(0deg) translateX(300px) rotate(0deg); }
+	to {transform: rotate(360deg) translateX(300px) rotate(-360deg); }*/
+	 0%   { left: 870px; top: 50px;}
+     25%  { left: 870px; top: 550px;}
+     50%  { left: 50px; top: 550px;}
+     75%  { left: 50px; top: 50px;}
+     100% { left: 870px; top: 50px;}
+	 }
 @keyframes around3 {
-	from {transform: rotate(0deg) translateX(300px) rotate(0deg); }
-	to {transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+	/*from {transform: rotate(0deg) translateX(300px) rotate(0deg); }
+	to {transform: rotate(360deg) translateX(300px) rotate(-360deg); }*/
+	 0%   { left: 870px; bottom: 50px;}
+     25%  { left: 50px; bottom: 50px;}
+     50%  { left: 50px; bottom: 550px;}
+     75%  { left: 870px; bottom: 550px;}
+     100% { left: 870px; bottom: 50px;}
 }
 @keyframes around4 {
-	from {transform: rotate(0deg) translateX(300px) rotate(0deg); }
-	to {transform: rotate(360deg) translateX(300px) rotate(-360deg); }
+	/*from {transform: rotate(0deg) translateX(300px) rotate(0deg); }
+	to {transform: rotate(360deg) translateX(300px) rotate(-360deg); }*/
+	 0%   { left: 50px; bottom: 50px;}
+     25%  { left: 50px; bottom: 550px;}
+     50%  { left: 870px; bottom: 550px;}
+     75%  { left: 870px; bottom: 50px;}
+     100% { left: 50px; bottom: 50px;}
+}
+html {
+	height: 100%;
+	width: 100%;
 }
 body {
+	height: 100%;
+	width: 100%;
 	font: normal 16px/24px 'Lobster-Regular';
 	margin: 0;
 }
 .container {
-	margin: 50px auto;
-	background-image: radial-gradient(lightblue 80%, white);
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	background-image: radial-gradient(lightblue 60%, white);
 	position: relative;
-	padding: 10px;
-	width: 800px;
-	height: 800px;
+	align-items: center;
+	/*padding: 10px;*/
+	/*width: 800px;*/
+	height: 700px;
 }
 p, h1, h4 {
+	margin: 10px;
 	background: white;
 	border-radius: 10px;
 	width: 280px;
@@ -39,54 +67,62 @@ p, h1, h4 {
 	transition-timing-funchion: linear;
 }
 h1, h4 {text-align: center;}
-
-@media screen and (min-width: 640px) {
+		
+@media screen and (min-width: 790px) {
 			.container {
-				display: flex;
-				flex-direction: column;
 				justify-content: center;
-				align-items: center;
-				height: 816px;
-				padding: 0;
-				position: relative;
-				
+				height: 700px;
+				padding: 0;	
 			}
-            p {
-				position: absolute;
-				margin: 0;
+            h1, h4 {
+				position: relative;
 			}
 			.first {
 				top: 50px;
 				left: 50px;
+				position: absolute;
+		
 			}
 			.second {
 				top: 50px;
 				right: 50px;
+				position: absolute;
+			
 			}
 			.third {
 				bottom: 50px;
 				right: 50px;
+				position: absolute;
+				 
 			}
 			.fourht {
 				bottom: 50px;
 				left: 50px;
+				position: absolute;
+				
 			}
+	}	
 @media screen and (min-width: 1200px) {
 			.container {
-				width: 1240px;
+				width: 100%;
+				height: 100%;
+				transform-origin: center;
 			}
 			
 			.first {
-				transform-origin: center;
-			animation: around1 15s linear infinite;				
+					position: absolute;
+					animation: around1 25s linear infinite;
 			}
 			.second {
-			animation: around2 15s linear infinite;				
+					position: absolute;
+					animation: around2 25s linear infinite;
 			}
 			.third {
-			animation: around3 15s linear infinite;				
+					position: absolute;
+					animation: around3 25s linear infinite;
 			}
 			.fourht {
-			animation: around4 15s linear infinite;				
+					position: absolute;
+					animation: around4 25s linear infinite;
 			}
 		}
