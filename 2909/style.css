@@ -1,0 +1,126 @@
+﻿@font-face {
+  font-family: 'Oswald';
+  src: url('fonts/Oswald-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('fonts/Oswald-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('fonts/Oswald-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	margin: 0;
+	font: normal 16px/22px 'OpenSans';
+	color: #999;
+	background: #fff;
+}
+header {
+	height: 890px;
+	background: url('images/header_bg.png') center top no-repeat, linear-gradient(to bottom, #404149 740px, transparent 740px);
+	position: relative;
+	}
+.inner {
+	position: absolute;
+	display: flex;
+	width: 900px;
+	height: 200px;
+	background: lightgrey;
+	top: 400px;
+	margin: 250px auto;
+}
+.age {
+	width: 800px;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-content: center;
+	padding: 0;	
+	margin: 0;
+}	
+.age > h1	{
+	color: #f7654a;
+	padding: 0;	
+	margin-bottom: 0;
+}
+.age > h3 {
+	color: black;
+	padding: 0;	
+	font: 500 normal 36px/53px 'Oswald';
+	margin: 0;
+	text-align: center;
+	text-transform: lowercase;
+}
+.age > h6 {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+} 
+	
+footer {
+	height: 181px;
+	background: #f7654a;
+}
+main {
+	margin: 100px auto 150px;
+	width: 1110px;
+}
+.container {
+	margin: 0 auto;
+	width: 1110px;
+}
+h1 {
+	margin-bottom: 60px;
+	font: 500 normal 36px/53px 'Oswald';
+	text-align: center;
+	text-transform: uppercase;
+	color: #404149;
+}
+.gallery {
+	display: flex;
+	gap: 30px;
+}
+.gal_unit {
+	width: 350px;
+	flex: none;
+}
+
+header h1, h3 {
+			text-align: center;
+			color: white; 
+			font: 500 normal 36px/53px 'Oswald';
+			text-transform: uppercase;
+			padding: 100px;
+			padding-bottom: 0;
+			}
+			
+
+
+footer h1, h2 {text-align: left;
+			color: white; 
+			}
+			
+form {
+	text-align: right;
+
+}
+ 
+
+
+
+
+
+
