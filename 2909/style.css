@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
   font-family: 'Oswald';
   src: url('fonts/Oswald-Regular.woff2') format('woff2');
   font-weight: 400;
@@ -25,16 +25,60 @@
 
 body {
 	margin: 0;
+	padding: 0;
 	font: normal 16px/22px 'OpenSans';
 	color: #999;
 	background: #fff;
 }
 header {
+	width: 1920;
 	height: 890px;
 	background: url('images/header_bg.png') center top no-repeat, linear-gradient(to bottom, #404149 740px, transparent 740px);
 	position: relative;
 	}
-.inner {
+.menu-header {
+	display: grid;
+	padding: 0;
+	margin:0;
+}
+.logo {
+	grid-area: logo;
+	width: 60px;
+	padding-top: 30px;
+	height: 50px;
+	padding-left: 405px;
+}
+ 
+.gamburger {
+	grid-area: menu;
+	padding-top: 30px;
+	padding-right: 405px;
+	width: 50px;
+	height: 50px;
+}
+	
+.h1-header {
+			width: 734px;
+			height: 171px;
+			margin: 0 auto;
+			text-align: center;
+			color: white; 
+			font: 500 normal 36px/53px 'Oswald';
+			text-transform: uppercase;
+			padding-top: 192px;
+			
+			letter-spacing: 0.02em;
+			padding-bottom: 0;
+			}
+.h2-header {	
+			width: 734px;
+			height: 22px;
+			margin: 0 auto;
+			padding-top: 35px;
+			text-align: center;
+			text-transform: uppercase;
+}	
+.years {
 	position: absolute;
 	display: flex;
 	width: 900px;
@@ -98,15 +142,7 @@ h1 {
 	flex: none;
 }
 
-header h1, h3 {
-			text-align: center;
-			color: white; 
-			font: 500 normal 36px/53px 'Oswald';
-			text-transform: uppercase;
-			padding: 100px;
-			padding-bottom: 0;
-			}
-			
+
 
 
 footer h1, h2 {text-align: left;
