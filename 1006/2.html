@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<html lang="ru">
+		<head>
+			<meta charset="utf-8">
+
+			<title>Objects</title>
+
+			<script>
+let a = {
+	name: 'Иван',
+	speciality: 'Плотник'
+};
+let b = {
+	name: 'Петр',
+	speciality: 'Инженер'
+};
+let c = {
+	name: 'Артур',
+	speciality: 'разгильдяй'
+};
+function chekman(x) {
+	if (x.speciality === 'разгильдяй') return  'Это ' + x['name'] + '. Мы его не уважаем'; return 'Это ' + x['name'] + '. Мы его уважаем';
+}	
+	
+	
+console.log(chekman(a));
+
+
+			</script>
+		</head>
+
+		<body></body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<html lang="ru">
+		<head>
+			<meta charset="utf-8">
+
+			<title>Functions</title>
+
+			<script>
+
+function summa(x, y) {
+	let sum = x + y;
+	return sum;
+}
+
+function multi(x, y) {
+	let mul = x * y;
+	return mul;
+	/*return x * y */ 
+}
+function fact(n) {
+	if ((n > 0) && (Math.floor(n) == n) && (typeof n == 'number')) {
+	let res = 1;
+	for (let i = 1; i <= n; i++) {
+	res = res * i; //res *= i;
+	}
+	
+	return res;
+	} else {
+	return 'негодный аргумент';
+	}
+	}
+	
+
+
+
+let a = 2, b = 4;
+let c = 3, d = 5;
+let q = 'Мос', w = "ква";
+
+console.log(summa(q, w));
+console.log(multi(a, b));
+
+			</script>
+		</head>
+
+		<body></body>
+</html>
