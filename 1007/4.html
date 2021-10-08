@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+	<html lang="ru">
+		<head>
+			<meta charset="utf-8">
+
+			<title>Игра в загадки</title>
+
+			<script>
+
+
+let riddle = [
+  [
+    "Зимой и летом одним цветом", 
+    ["eлка", "eль", "cосна", ] 
+  ],
+  [
+    "Висит груша нельзя скушать",
+    ["лампа", "лампочка"]
+  ],
+  [
+    "Течет-течет -не вытечет, бежит-бежит —не выбежит",
+    ["река", "речка"]
+  ]
+]
+
+if (confirm("Здравствуйте! Отгадаете загадки?")) {
+	function getAnswer(riddle) {
+		return prompt(riddle[0]);
+	} 
+	
+	function isValidAnswer(riddle, answer) {
+		for (let i = 0; i < riddle[1].length; i++) {
+		if (riddle[1][i] == answer) return true;
+		}
+		return false;
+		alert("Правильных ответов: " + validAnswers); 
+		alert('До свидания!');
+	}
+}
+else {
+	alert('До свидания!');
+}
+
+var validAnswers = 0;
+
+
+			</script>
+		</head>
+
+		<body></body>
+</html>
