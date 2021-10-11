@@ -8,7 +8,7 @@
 			<script>
 
 
-let riddle = [
+let riddles = [
   [
     "Зимой и летом одним цветом", 
     ["eлка", "eль", "cосна", ] 
@@ -24,29 +24,27 @@ let riddle = [
 ]
 
 if (confirm("Здравствуйте! Отгадаете загадки?")) {
-let x = 0;
-alert('Поехали');
-
-	function getAnswer(riddle) {
-		return prompt(riddle[0]);
-	} 
+	let score = 0;
 	
-	function isValidAnswer(riddle, answer) {
-		for (let i = 0; i < riddle[1].length; i++) {
-		if (riddle[1][i] == answer) return true;
-		}
-		return false;
-		alert("Правильных ответов: " + validAnswers); 
+	function game() {
+			let answer = "";
+			for (let j = 0; j < riddles.length; j++) {
+				answer = prompt(riddles[j][0]).toUpperCase();
+			
+					for (let i = 0; i < riddles[j][1].length; i++) {
+						if (answer == riddles[i][1]) {
+							score++;
+							}
+					}
+			}
+	
+		alert("Правильных ответов: " + score); 
 		alert('До свидания!');
 	}
-}
-else {
+	game();
+} else {
 	alert('До свидания!');
-}
-
-let validAnswers = 0;
-
-
+	}
 			</script>
 		</head>
 
