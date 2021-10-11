@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+	<html lang="ru">
+		<head>
+			<meta charset="utf-8">
+
+			<title>Игра в загадки</title>
+
+			<script>
+
+
+let riddles = [
+  {
+    question: "Зимой и летом одним цветом", 
+	answers: ["eлка", "eль", "cосна"] 
+  },
+  {
+    question: "Этот конь не ест овса, Вместо ног — два колеса. Сядь верхом и мчись на нём, Только лучше правь рулём.",
+	answers: ["велосипед", "мопед", "мотоцикл"]
+  },
+  {
+    question: "Не снег, А белое всегда. Хоть и течет, А не вода.",
+	answers: ["молоко", "кефир", "йогурт"]
+  }
+]
+
+if (confirm("Здравствуйте! Отгадаете загадки?")) {
+	let score = 0;
+	
+	function game() {
+			let answer = "";
+			for (let j = 0; j < riddles.length; j++) {
+				answer = prompt(riddles[j].question).toLowerCase();
+			
+					for (let i = 0; i < riddles[j].answers.length; i++) {
+						if (answer == riddles[j].answers[i]) {
+							score++;
+							}
+					}
+			}
+	
+		alert("Правильных ответов: " + score); 
+		alert('До свидания!');
+	}
+	game();
+} else {
+	alert('До свидания!');
+	}
+			</script>
+		</head>
+
+		<body></body>
+</html>
