@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Координаты</title>
+        
+        <style>
+           #pink {
+				background: pink;
+				width: 300px;
+				height: 300px;
+				margin: 200px;
+		   }
+        </style>
+        
+        <script>
+            window.onload = function(){
+				let coords = document.getElementById('pink').getBoundingClientRect();
+					console.log(coords.top, coords.left);
+				
+			}
+        </script>
+    </head>
+    
+    <body>
+		<div id='pink'></div>
+	</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Chessboard</title>
+        
+        <style>
+            table {
+                border: 1px solid #000;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            td, th {
+                width: 25px;
+                height: 25px;
+            }
+            th {
+                font-family: Arial;
+                color: #666;
+            }
+            td {
+                font-weight: bold;
+            }
+            tr:nth-child(even) td:nth-child(odd),
+            tr:nth-child(odd) td:nth-child(even) {
+                background: #999;
+            }
+            tr:nth-child(even) td:nth-child(even),
+            tr:nth-child(odd) td:nth-child(odd) {
+                background: #eee;
+            }
+            tr:nth-child(2), tr:nth-child(3) {
+                color: red;
+            }
+            tr:nth-of-type(8), tr:nth-of-type(9) {
+                color: yellow;
+            }
+			.clicked {
+			background: blue !important;
+			}
+        </style>
+        
+        <script>
+            window.onload = function(){
+                let chessboard = '';
+                chessboard += '<table>';
+                for (let i = 0; i < 10; i++) {
+                    chessboard += '<tr>';
+                    for (let j = 0; j < 10; j++) {
+                        let hlpstr = 'd';
+                        if ((i == 0) || (i == 9) || (j == 0) || (j == 9)) hlpstr = 'h';
+                        chessboard += '<t' + hlpstr + '>';
+                        chessboard += '</t' + hlpstr + '>';
+                    }
+                    chessboard += '</tr>';
+                }
+                chessboard += '</table>';
+				document.body.innerHTML = chessboard;
+			   
+				let letters = 'ABCDEFGH';
+                let rows = document.getElementsByTagName('tr');
+                let uses = rows[0].getElementsByTagName('th');
+					for (let i = 1; i < 9; i++) {
+						uses[i].innerHTML = letters[i-1];
+						}
+				uses = rows[9].getElementsByTagName('th');
+					for (let i = 1; i < 9; i++) {
+						uses[i].innerHTML = letters[i-1];
+						}
+					for (let i = 1; i < 9; i++) {
+					rows[i].querySelectorAll('th').forEach(function(item){
+                        item.innerHTML = 9 - i;
+						});
+					}
+                
+                // Расставляем фигуры
+				uses =  rows[2].getElementsByTagName('td');
+					for (let i = 1; i < 9; i++) {
+						uses[i-1].innerHTML = '&#9823';
+						};
+						
+				uses =  rows[7].getElementsByTagName('td');
+					for (let i = 1; i < 9; i++) {
+						uses[i-1].innerHTML = '&#9817';
+						};	
+				
+				let shapes = ['&#9820','&#9822','&#9821','&#9819','&#9818','&#9821','&#9822','&#9820'];						
+				let uses1 = rows[1].getElementsByTagName('td');
+				let uses2 = rows[8].getElementsByTagName('td');
+				for (let i = 0; i < 8;  i++) {
+						uses1[i].innerHTML = shapes[i];
+						uses2[i].innerHTML = shapes[i];
+						};
+						
+				document.addEventListener('click', function(event){
+                    if (event.target.tagName == 'TD') {
+                        // ранее кликнутые клетки должны перестать быть синими
+                        // кликнутая клетка должна стать синей
+                        // если кликнута синяя клетка, она должна перестать быть синей
+                        if (event.target.className != 'clicked') {
+                            document.querySelectorAll('.clicked').forEach(function(item){
+                                item.className = '';
+                            });
+                            event.target.className = 'clicked';
+                        } else {
+                            document.querySelectorAll('.clicked').forEach(function(item){
+                                item.className = '';
+                            });
+                        }
+                    }
+                });
+			}
+        </script>
+    </head>
+    
+    <body></body>
+</html>
