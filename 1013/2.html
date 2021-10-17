@@ -16,9 +16,11 @@
         
         <script>
             window.onload = function(){
-				let coords = document.getElementById('pink').getBoundingClientRect();
-					//console.log(coords.top, coords.left, coords.right, coords.bottom);
-					console.log(coords.x, coords.y, coords.width, coords.height);
+				let coords = document.getElementById('pink').addEventListener('click', function(event) {
+					
+					console.log(document.getElementById('pink').getBoundingClientRect());
+				});
+				
 			}
         </script>
     </head>
