@@ -1,7 +1,6 @@
 $(function() {
-});
 
-	let field = $('#green').getBoundingClientRect();
+	let field = $('#green')[0].getBoundingClientRect();
 	let step = 10;
 	let borders = {
 		left: 0,
@@ -11,6 +10,7 @@ $(function() {
 		bottom: field.height,
 	}
 	$('#red').on('mouseover', function(e){
+		let red = $('#red') [0];
 		let coords = e.target.getBoundingClientRect();
 		// вычисляем центр красного блока
 		let center = {
@@ -20,13 +20,13 @@ $(function() {
 		// сравниваем координаты центра и координаты курсора мыши
 		// определяем в каком направлении двигаться
 		let delta = {
-			x: Math.sign(center.x - e.x),
-			y: Math.sign(center.y - e.y),
+			x: Math.sign(center.x - e.clientX),
+			y: Math.sign(center.y - e.clientY),
 		}
 		// определяем положение верхнего левого угла блока относительно его родителя
 		let oldplace = {
-			left: $('#red').offsetLeft,
-			top: $('#red').offsetTop,
+			left: red.offsetLeft,
+			top: red.offsetTop,
 		}
 		// определяем положение верхнего левого угла блока относительно его родителя и вычисляем новое положение
 		let newplace = {
@@ -45,13 +45,13 @@ $(function() {
 			newplace.top = borders.bottom - coords.height - 2;
 		}
 		// прописываем в стили красного блока новое положение
-		$('#red').css(oldplace.left + 'px');
-		$('#red').css($('#red').offsetTop + 'px');
+		$('#red').css('left', oldplace.left + 'px');
+		$('#red').css('top', red.offsetTop + 'px');
 		let xstep = (newplace.left - oldplace.left) / 1000;
 		let ystep = (newplace.top - oldplace.top) / 1000;
 		for (let i = 1; i < 1001; i++) {
-			$('#red').css(oldplace.left + xstep * i) + 'px');
-			$('#red').css((oldplace.top + ystep * i) + 'px');
+			$('#red').css('left', (oldplace.left + xstep * i) + 'px');
+			$('#red').css('top', (oldplace.top + ystep * i) + 'px');
 			if ((i > 10) && (i < 990)) {
 				i += 9;
 				if ((i > 100) && (i < 900)) {
@@ -60,4 +60,4 @@ $(function() {
 			}
 		}
 	});
-            
+})         

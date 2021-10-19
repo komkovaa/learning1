@@ -58,7 +58,7 @@ $(function(){
 						};
 				// Если после всех манипуляций на доске остались клетки с классами stepfrom и steptoб вывести в консоль объект вида {stepfrom: <cell id>, stepto: <cell id>}
 				if ($('td').hasClass('stepfrom') && $('td').hasClass('stepto')) {
-					console.log("stepfrom: " +  "cell " + '');
+					console.log("stepfrom: " +  "cell " + $('.stepfrom').prop('id'));
 					console.log("stepto: " +  "cell " + this.id);
 					};
 	}
