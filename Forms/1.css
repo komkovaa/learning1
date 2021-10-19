@@ -1,0 +1,97 @@
+body {
+	margin: 0;
+	font: normal 16px/24px Courier New;
+}
+h1 {
+	text-align: center;
+}
+form {
+	width: 1000px;
+	margin: 0 auto;
+}
+fieldset {
+	margin: 2em;
+	padding: 1em;
+	border-radius: 10px;
+}
+input {
+	width: 100%;
+	box-sizing: border-box;
+	border-width: 1px;
+	border-radius: 5px;
+}
+#calendar {
+	margin: 0 auto;
+}
+.dp_wrapper {
+	margin: 1em 0 0;
+
+	padding: 1em;
+}
+.dp_header {
+	text-align: center;
+	height: 26px;
+}
+.dp_header > b {
+	line-height: 26px;
+}
+.prev, .bigprev, .next, .bignext {
+	display: block;
+	width: 4em;
+	cursor: pointer;
+	font-weight: bold;
+	color: #999;
+}
+.prev:hover, .bigprev:hover, .next:hover, .bignext:hover {
+	color: #000;
+	
+}
+.prev, .bigprev {
+	float: left;
+	margin-left: 1em;
+}
+.next, .bignext {
+	float: right;
+	margin-right: 1em;
+}
+.dp_grid {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: auto;
+	margin-top: 1em;
+	gap: 1em;
+}
+.dp_grid > span {
+	text-align: center;
+}
+.headday {
+	font-weight: bold;
+	padding: 0.5em;
+}
+.getter {
+	cursor: pointer;
+	
+}
+.getter:hover {
+	background: #999;
+}
+.holiday {
+	color: red;
+	
+}
+.markedday {
+	color: #fff;
+	background: teal;
+	border-radius: 5px;
+}
+.today {
+	border: 2px groove teal;
+	border-radius: 5px;
+}
+.holiday.today {
+	border: 2px groove red;
+	border-radius: 5px;
+}
+.cashday {
+	text-decoration: underline;
+}
